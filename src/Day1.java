@@ -1,12 +1,8 @@
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.Scanner;
 
 public class Day1 {
     public static void main(String[] args) {
-        ArrayList<Integer> Input = ReadFile("Input/Day1");
+        ArrayList<Integer> Input = ReadingFiles.ReadFileInt("Input/Day1");
         Part1(Input);
         Part2(Input);
 
@@ -38,17 +34,5 @@ public class Day1 {
         System.out.println("Failed");
     }
 
-    public static ArrayList<Integer> ReadFile(String FileName) {
-        ArrayList<Integer> Ouput = new ArrayList<>();
-        try {
-            File Input = new File(FileName);
-            Scanner Reader = new Scanner(Input);
-            while(Reader.hasNextLine()) {
-                Ouput.add(Reader.nextInt());
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        return Ouput;
-    }
+
 }
