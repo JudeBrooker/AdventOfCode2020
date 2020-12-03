@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Day1 {
     public static void main(String[] args) {
-        ArrayList<Integer> Input = ReadingFiles.ReadFileInt("Input/Day1");
+        ArrayList<Integer> Input = ReadFile.Int("Input/Day1");
         Part1(Input);
         Part2(Input);
 

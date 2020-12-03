@@ -2,8 +2,8 @@ import java.util.ArrayList;
 
 public class Day2 {
     public static void main(String[] args) {
-        Part1(ReadingFiles.ReadFileString("Input/Day2"));
-        Part2(ReadingFiles.ReadFileString("Input/Day2"));
+        Part1(ReadFile.String("Input/Day2"));
+        Part2(ReadFile.String("Input/Day2"));
     }
 
     public static void Part1(ArrayList<String> Input) {
