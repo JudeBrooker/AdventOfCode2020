@@ -5,30 +5,30 @@ import java.util.Scanner;
 
 public class ReadFile {
     public static ArrayList<Integer> Int(String FileName) {
-        ArrayList<Integer> Ouput = new ArrayList<>();
+        ArrayList<Integer> Output = new ArrayList<>();
         try {
             File Input = new File(FileName);
             Scanner Reader = new Scanner(Input);
             while (Reader.hasNextLine()) {
-                Ouput.add(Reader.nextInt());
+                Output.add(Reader.nextInt());
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        return Ouput;
+        return Output;
     }
 
     public static ArrayList<String> String(String FileName) {
-        ArrayList<String> Ouput = new ArrayList<>();
+        ArrayList<String> Output = new ArrayList<>();
         try {
             File Input = new File(FileName);
             Scanner Reader = new Scanner(Input);
             while (Reader.hasNextLine()) {
-                Ouput.add(Reader.nextLine());
+                Output.add(Reader.nextLine());
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        return Ouput;
+        return Output;
     }
 }
