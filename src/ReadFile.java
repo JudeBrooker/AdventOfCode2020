@@ -31,4 +31,18 @@ public class ReadFile {
         }
         return Output;
     }
+
+    public static ArrayList<Long> Long(String FileName) {
+        ArrayList<Long> Output = new ArrayList<>();
+        try {
+            File Input = new File(FileName);
+            Scanner Reader = new Scanner(Input);
+            while (Reader.hasNextLine()) {
+                Output.add(Reader.nextLong());
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return Output;
+    }
 }
